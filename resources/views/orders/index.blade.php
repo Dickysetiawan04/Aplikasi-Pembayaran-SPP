@@ -1,3 +1,4 @@
+@extends('template')
 <!doctype html>
 <html lang="id">
 
@@ -42,19 +43,7 @@
 
 <body>
 
-    <div class="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 bg-white border-bottom box-shadow">
-        <h5 class="my-0 mr-md-auto font-weight-normal">Lvl Midtrans</h5>
-        <nav class="my-2 my-md-0 mr-md-3">
-            <a class="p-2 text-dark" href="https://github.com/fadlyatthoriq15">GitHub</a>
-            <a class="p-2 text-dark" href="https://instagram.com/fadlyatthoriq15">Instagram</a>
-        </nav>
-    </div>
-
-    <div class="container pb-5 pt-5">
-        <div class="row">
-            <div class="col-12">
-                <div class="card shadow">
-                    <div class="table-responsive">
+                        @section('body')
                         <table class="table table-hover table-condensed">
                             <thead class="thead-light">
                                 <th scope="col">#</th>
@@ -87,12 +76,7 @@
                                 @endforeach
                             </tbody>
                         </table>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
+                        @endsection
 </body>
 
 </html>

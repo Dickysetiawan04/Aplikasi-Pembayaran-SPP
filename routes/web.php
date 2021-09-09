@@ -21,6 +21,8 @@ route::get('/template', function() {
     return view('template');
 });
 
+Route::resource('orders', OrderController::class)->only(['index', 'show']);
+
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth'])->name('dashboard');
