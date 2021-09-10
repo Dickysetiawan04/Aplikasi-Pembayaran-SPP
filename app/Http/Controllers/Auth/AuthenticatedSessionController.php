@@ -28,11 +28,14 @@ class AuthenticatedSessionController extends Controller
      */
     public function store(LoginRequest $request)
     {
-        $request->authenticate();
+        if (Auth::guard('siswa')->attempt(['email' => $request->email, 'password' => $request->password])) {
+            return redirect('/siswas');
+        } else if (Auth::guard('petugas')->attempt(['email' => $request->email, 'password' => $request->password])) {
+            return redirect('/siswas');
+        }
 
-        $request->session()->regenerate();
+        return redirect('/login');
 
-        return redirect()->intended(RouteServiceProvider::HOME);
     }
 
     /**
@@ -49,6 +52,6 @@ class AuthenticatedSessionController extends Controller
 
         $request->session()->regenerateToken();
 
-        return redirect('/');
+        return redirect('/login');
     }
 }

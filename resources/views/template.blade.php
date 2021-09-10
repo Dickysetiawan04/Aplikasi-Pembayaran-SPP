@@ -89,13 +89,15 @@
 									</li>
 									<li>
 										<div class="dropdown-divider"></div>
-										<a class="dropdown-item" href="#">My Profile</a>
-										<a class="dropdown-item" href="#">My Balance</a>
-										<a class="dropdown-item" href="#">Inbox</a>
-										<div class="dropdown-divider"></div>
-										<a class="dropdown-item" href="#">Account Setting</a>
-										<div class="dropdown-divider"></div>
-										<a class="dropdown-item" href="#">Logout</a>
+										<form method="POST" action="{{ route('logout') }}">
+											@csrf
+
+											<x-dropdown-link :href="route('logout')"
+													onclick="event.preventDefault();
+																this.closest('form').submit();">
+												{{ __('Log Out') }}
+											</x-dropdown-link>
+										</form> 
 									</li>
 								</div>
 							</ul>
@@ -127,18 +129,8 @@
 							<div class="collapse in" id="collapseExample">
 								<ul class="nav">
 									<li>
-										<a href="#profile">
-											<span class="link-collapse">My Profile</span>
-										</a>
-									</li>
-									<li>
 										<a href="#edit">
 											<span class="link-collapse">Edit Profile</span>
-										</a>
-									</li>
-									<li>
-										<a href="#settings">
-											<span class="link-collapse">Settings</span>
 										</a>
 									</li>
 								</ul>
@@ -155,12 +147,12 @@
 							<div class="collapse" id="dashboard">
 								<ul class="nav nav-collapse">
 									<li>
-										<a href="../demo1/index.html">
+										<a href="{{asset('demo1/index.html')}}">
 											<span class="sub-item">Dashboard 1</span>
 										</a>
 									</li>
 									<li>
-										<a href="../demo2/index.html">
+										<a href="{{asset('demo2/index.html')}}">
 											<span class="sub-item">Dashboard 2</span>
 										</a>
 									</li>
@@ -179,7 +171,7 @@
 					<div class="page-inner py-5">
 						<div class="d-flex align-items-left align-items-md-center flex-column flex-md-row">
 							<div>
-								<h2 class="text-white pb-2 fw-bold">Dashboard</h2>
+								<h2 class="text-white pb-2 fw-bold">@yield ('title')</h2>
 							</div>
 						</div>
 					</div>
@@ -301,7 +293,7 @@
 	<script src="{{asset('assets/js/plugin/jqvmap/maps/jquery.vmap.world.js')}}"></script>
 
 	<!-- Sweet Alert -->
-	<script src="{{asset('assets/js/plugin/sweetalert/sweetalert.min.js')}}"></script>
+	<script src="{{asset('assets/js/plugin/sweetalert/sweetalert2.all.min.js')}}"></script>
 
 	<!-- Atlantis JS -->
 	<script src="{{asset('assets/js/atlantis.min.js')}}"></script>
