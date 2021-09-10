@@ -76,12 +76,12 @@ return [
         ],
 
         'siswas' => [
-            'driver' => 'database',
+            'driver' => 'eloquent',
             'model' => App\Models\Siswa::class,
         ],
 
         'petugas' => [
-            'driver' => 'database',
+            'driver' => 'eloquent',
             'model' => App\Models\Petugas::class,
         ],
     ],
