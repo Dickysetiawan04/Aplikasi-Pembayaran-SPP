@@ -21,8 +21,6 @@ class Siswa extends Model
         'name',
         'no_telpon',
         'foto',
-        'tingkat',
-        'jurusan',
         'kelas',
         'email',
         'password',

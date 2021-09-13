@@ -57,28 +57,6 @@
                 </div>
             </div>
             <div class="col-xs-12 col-sm-12 col-md-12">
-                <div class="form-group" style="width: 300px;">
-                    <select class="custom-select form-control-border border-width-2" id="tingkat" name="tingkat">
-                        <option value="">-- Pilih Tingkat --</option>
-                        <option value="X" {{($siswa->tingkat === 'X') ? 'Selected' : ''}}>X</option>
-                        <option value="XI" {{($siswa->tingkat === 'XI') ? 'Selected' : ''}}>XI</option>
-                        <option value="XII" {{($siswa->tingkat === 'XII') ? 'Selected' : ''}}>XII</option>
-                      </select>
-                </div>
-            </div>
-            <div class="col-xs-12 col-sm-12 col-md-12">
-                <div class="form-group" style="width: 300px;">
-                    <select class="custom-select form-control-border border-width-2" id="jurusan" name="jurusan">
-                        <option value="">-- Pilih Jurusan --</option>
-                        <option value="RPL" {{($siswa->jurusan === 'RPL') ? 'Selected' : ''}}>RPL</option>
-                        <option value="MM" {{($siswa->jurusan === 'MM') ? 'Selected' : ''}}>MM</option>
-                        <option value="BC" {{($siswa->jurusan === 'BC') ? 'Selected' : ''}}>BC</option>
-                        <option value="TKJ" {{($siswa->jurusan === 'TKJ') ? 'Selected' : ''}}>TKJ</option>
-                        <option value="TEI" {{($siswa->jurusan === 'TEI') ? 'Selected' : ''}}>TEI</option>
-                      </select>
-                </div>
-            </div>
-            <div class="col-xs-12 col-sm-12 col-md-12">
                 <div class="form-group" style="width: 600px;">
                     <input type="text" name="kelas" class="form-control form-control-border border-width-2" id="exampleInputBorderWidth2" placeholder="Masukkan Kelas" value="{{ $siswa->kelas }}">
                 </div>

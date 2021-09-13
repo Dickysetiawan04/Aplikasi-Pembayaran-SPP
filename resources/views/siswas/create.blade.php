@@ -63,28 +63,6 @@
                 </div>
             </div>
             <div class="col-xs-12 col-sm-12 col-md-12">
-                <div class="form-group" style="width: 300px;">
-                    <select class="custom-select form-control-border border-width-2" id="tingkat" name="tingkat">
-                        <option value="">-- Pilih Tingkat --</option>
-                        <option value="X">X</option>
-                        <option value="XI">XI</option>
-                        <option value="XII">XII</option>
-                      </select>
-                </div>
-            </div>
-            <div class="col-xs-12 col-sm-12 col-md-12">
-                <div class="form-group" style="width: 300px;">
-                    <select class="custom-select form-control-border border-width-2" id="jurusan" name="jurusan">
-                        <option value="">-- Pilih Jurusan --</option>
-                        <option value="RPL">RPL</option>
-                        <option value="MM">MM</option>
-                        <option value="TEI">TEI</option>
-                        <option value="BC">BC</option>
-                        <option value="TKJ">TKJ</option>
-                      </select>
-                </div>
-            </div>
-            <div class="col-xs-12 col-sm-12 col-md-12">
                 <div class="form-group" style="width: 600px;">
                     <input type="text" name="kelas" class="form-control form-control-border border-width-2" id="exampleInputBorderWidth2" placeholder="Masukkan Kelas">
                 </div>

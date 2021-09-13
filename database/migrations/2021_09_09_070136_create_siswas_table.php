@@ -19,8 +19,6 @@ class CreateSiswasTable extends Migration
             $table->string('name');
             $table->bigInteger('no_telpon');
             $table->text('foto')->nullable()->default('foto/spp_profil.jpg');
-            $table->enum('tingkat', ['X','XI','XII']);
-            $table->enum('jurusan', ['MM', 'RPL', 'BC', 'TKJ', 'TEI']);
             $table->string('kelas');
             $table->string('email')->unique();
             $table->string('password');
